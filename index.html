@@ -1,25 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Atividade Moodle — Guia do Aluno </title>
-    <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Atividade Moodle — Guia do Aluno</title>
+  <style>
+    :root{--bg:#f6f8fb;--card:#ffffff;--accent:#2b6cb0;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#0f172a}
+    header{background:linear-gradient(90deg,var(--accent),#3b82f6); color:#fff; padding:28px 20px}
+    .container{max-width:980px;margin:24px auto;padding:0 20px}
+    h1,h2,h3{margin:0 0 12px}
+    .lead{opacity:.95}
+    .grid{display:grid;gap:16px}
+    .two{grid-template-columns:1fr 360px}
+    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,.06);padding:18px}
+    nav ul{display:flex;gap:8px;flex-wrap:wrap;padding:0;margin:12px 0;list-style:none}
+    nav a{background:rgba(255,255,255,.08);padding:8px 12px;border-radius:8px;color:#fff;text-decoration:none;font-weight:600}
+    .resources li{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px dashed #eef2f7}
+    .resources li:last-child{border-bottom:none}
+    .badge{background:#eef2fb;color:var(--accent);padding:6px 8px;border-radius:8px;font-weight:700}
+    .muted{color:var(--muted);font-size:14px}
+    .steps ol{padding-left:18px}
+    .preview{width:100%;height:180px;border-radius:8px;border:2px dashed #e6edf6;background:#fbfdff;display:flex;align-items:center;justify-content:center;color:var(--muted);}
+    .placeholder-img{max-width:100%;max-height:160px;border-radius:8px}
+    footer{margin:28px 0 60px;color:var(--muted);font-size:13px}
+    /* accordion */
+    .accordion .item{border-top:1px solid #eef2f7}
+    .accordion button{width:100%;text-align:left;background:none;border:0;padding:14px;font-size:16px;display:flex;justify-content:space-between;align-items:center}
+    .panel{padding:0 14px 16px;display:none}
+    .panel.show{display:block}
+    .tool{display:inline-block;padding:6px 8px;border-radius:6px;background:#f1f8ff;margin-right:6px;font-weight:700;color:var(--accent)}
+    /* responsive */
+    @media (max-width:880px){.two{grid-template-columns:1fr}nav ul{justify-content:center}}
+    /* small helpers */
+    .small{font-size:13px;color:var(--muted)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+  </style>
 </head>
 <body>
   <header>
-<div class="container">
-<h1>Atividade no Moodle — Guia do Aluno</h1>
-<p class="lead">Este site explica passo a passo a atividade que você fará na sala virtual, além dos recursos do Moodle que vamos utilizar (Fórum, Tarefa, Questionário, entre outros).</p>
-<nav>
-<ul>
-<li><a href="#overview">Visão geral</a></li>
-<li><a href="#resources">Recursos</a></li>
-<li><a href="#steps">Como entregar</a></li>
-<li><a href="#faq">Dúvidas</a></li>
-</ul>
-</nav>
-</div>
-</header>  
+    <div class="container">
+      <h1>Atividade no Moodle — Guia do Aluno</h1>
+      <p class="lead">Este site explica passo a passo a atividade que você fará na sala virtual, além dos recursos do Moodle que vamos utilizar (Fórum, Tarefa, Questionário, entre outros).</p>
+      <nav>
+        <ul>
+          <li><a href="#overview">Visão geral</a></li>
+          <li><a href="#resources">Recursos</a></li>
+          <li><a href="#steps">Como entregar</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="overview" class="card">
+      <h2>Visão geral da atividade</h2>
+      <p class="muted">Este site foi criado para orientar você, aluno, sobre como navegar e utilizar os recursos essenciais do Moodle durante a realização de atividades. Aqui você encontrará explicações, materiais de apoio e espaços preparados para áudio e vídeo.</p>
+
+      <h3>Mensagem do Professor ao Aluno</h3>
+      <div class="card" style="background:#fbfbff;padding:14px;margin-bottom:12px">
+        <p>Olá, estudante. Nossa jornada virtual continua, e hoje você encontrará na sala um pequeno conjunto de ferramentas que vão funcionar como um mapa interativo. Cada recurso do Moodle foi colocado ali para guiar você com leveza, como quem acende lanternas ao longo de um caminho digital.</p>
+
+        <p>Para realizar a atividade proposta nesta semana, você utilizará três áreas principais da sala virtual:</p>
+
+        <ol>
+          <li><strong>Recursos de apoio</strong>
+            <ul>
+              <li><strong>Arquivo</strong> — Orientações completas da atividade.</li>
+              <li><strong>Página</strong> — Resumo e exemplos.</li>
+              <li><strong>Pasta</strong> — Materiais complementares.</li>
+              <li><strong>URL</strong> — Acesso a conteúdo externo complementar.</li>
+            </ul>
+          </li>
+
+          <li><strong>Atividade avaliativa</strong>
+            <ul>
+              <li><strong>Tarefa</strong> — Local de envio da sua produção.</li>
+            </ul>
+          </li>
+
+          <li><strong>Espaço de interação</strong>
+            <ul>
+              <li><strong>Fórum</strong> — Dúvidas, reflexões e troca com colegas.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h4>Como seguir o fluxo da atividade</h4>
+        <ol>
+          <li>Leia os materiais: Arquivo, Página e Pasta.</li>
+          <li>Acesse a URL se quiser aprofundar.</li>
+          <li>Produza o trabalho solicitado.</li>
+          <li>Envie sua produção na Tarefa.</li>
+          <li>Participe do Fórum.</li>
+        </ol>
+
+        <p>A sala virtual fu
+
+    <section id="resources" class="card" style="margin-top:16px">
+      <h2>Recursos da sala virtual (o que são e como usar)</h2>
+      <div class="accordion">
+        <div class="item">
+          <button data-target="panel-forum"><span><span class="tool">Fórum</span>Fórum de Discussão</span><span class="small">+</span></button>
+          <div id="panel-forum" class="panel">
+            <p class="small">Para esta atividade, use o Fórum para compartilhar sua resposta reflexiva e interagir com colegas. Dicas práticas:</p>
+            <ul>
+              <li>Crie um novo tópico com um título claro.</li>
+              <li>Explique sua resposta em 6–8 linhas.</li>
+              <li>Responda a pelo menos 2 colegas com comentários construtivos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="item">
+          <button data-target="panel-tarefa"><span><span class="tool">Tarefa</span>Tarefa / Envio de Arquivo</span><span class="small">+</span></button>
+          <div id="panel-tarefa" class="panel">
+            <p class="small">A Tarefa é onde você fará o upload do trabalho final. Aceita formatos: PDF, DOCX, JPG, PNG, MP3 (dependendo da configuração do professor).</p>
+            <ol>
+              <li>Abra o recurso <strong>Tarefa</strong> na sala.</li>
+              <li>Clique em "Adicionar submissão".</li>
+              <li>Arraste o arquivo ou use o botão para procurar no seu computador.</li>
+              <li>Confirme clicando em "Salvar alterações" e, se houver, em "Enviar tarefa".</li>
+              <li>Verifique o recibo/registro de envio.</li>
+            </ol>
+            <div class="preview" id="tarefa-preview">Coloque aqui sua imagem ou áudio (substitua o placeholder).</div>
+            <p class="small" style="margin-top:8px">Dica: nomeie o arquivo assim: <em>Nome_Sobrenome_Turma_Tarefa1.pdf</em></p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button data-target="panel-questionario"><span><span class="tool">Questionário</span>Questionário</span><span class="small">+</span></button>
+          <div id="panel-questionario" class="panel">
+            <p class="small">O Questionário pode ser cronometrado. Fique atento ao tempo e às tentativas permitidas.</p>
+            <ul>
+              <li>Leia as instruções no topo da página.</li>
+              <li>Não atualize a página durante a prova (pode perder respostas).</li>
+              <li>Se seu navegador travar, entre em contato com o professor imediatamente.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="item">
+          <button data-target="panel-material"><span><span class="tool">Arquivo / Página / Livro</span>Material de Apoio</span><span class="small">+</span></button>
+          <div id="panel-material" class="panel">
+            <p class="small">Os materiais (Arquivo, Página, Livro) trazem conteúdo de leitura e instruções. Leia com atenção antes de fazer o Questionário e a Tarefa.</p>
+            <p class="small">Use o botão de download do arquivo se quiser salvar o material em seu computador.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <button data-target="panel-perfil"><span><span class="tool">Perfil</span>Atualizar Perfil</span><span class="small">+</span></button>
+          <div id="panel-perfil" class="panel">
+            <p class="small">Verifique seu perfil (foto, nome, email). Isso facilita a identificação do professor ao corrigir as entregas.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="steps" class="card" style="margin-top:16px">
+      <h2>Passo a passo da atividade (o que eu preciso fazer)</h2>
+      <div class="steps">
+        <ol>
+          <li><strong>Ler o material</strong> disponibilizado em Arquivo / Página / Livro.</li>
+          <li><strong>Responder o Questionário</strong> de verificação de aprendizagem.</li>
+          <li><strong>Produzir o trabalho</strong> conforme o roteiro (texto ou apresentação; se quiser, grave um áudio explicativo).</li>
+          <li><strong>Enviar na Tarefa</strong> o arquivo final com o nome correto.</li>
+          <li><strong>Postar no Fórum</strong> um resumo da sua produção e comentar em 2 posts de colegas.</li>
+        </ol>
+        <p class="small">Se algo falhar (upload, tempo do quiz), tire prints e envie por mensagem ao docente usando o recurso "Enviar mensagens" da sala.</p>
+      </div>
+
+      <h3 style="margin-top:12px">Onde adicionar fotos e áudio (pronto para você substituir)</h3>
+      <p class="small">No preview abaixo há um espaço para imagem e um para áudio. Substitua os atributos <code>src</code> nos elementos <code>&lt;img&gt;</code> e <code>&lt;audio&gt;</code>.</p>
+      <div class="card" style="margin-top:12px">
+        <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
+          <div>
+            <div class="preview" id="image-slot"><img id="user-image" class="placeholder-img" src="/assets/placeholder-image.png" alt="placeholder"></div>
+            <p class="small">Imagem do trabalho (substitua <code>/assets/placeholder-image.png</code>).</p>
+          </div>
+          <div>
+            <div class="preview"><audio id="user-audio" controls src="/assets/placeholder-audio.mp3">Seu navegador não suporta áudio.</audio></div>
+            <p class="small">Áudio explicativo (substitua <code>/assets/placeholder-audio.mp3</code>).</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:12px"><a class="btn" id="download-btn" href="#" onclick="downloadTemplate();return false;">Baixar modelo de roteiro (TXT)</a></p>
+    </section>
+
+    <section id="faq" class="card" style="margin-top:16px">
+      <h2>Dúvidas frequentes</h2>
+      <ul>
+        <li><strong>Posso enviar mais de um arquivo?</strong> Depende da configuração da Tarefa — se estiver bloqueado, compacte os arquivos em .zip.</li>
+        <li><strong>E se eu errar o envio?</strong> Normalmente é possível corrigir até a data de entrega. Se não conseguir, contacte o professor com comprovante.</li>
+        <li><strong>Como sei se foi corrigido?</strong> Acompanhe as notas e feedbacks dentro da atividade Tarefa.</li>
+      </ul>
+    </section>
+
+    <footer class="card">
+      <p class="small">Este site é um guia: siga sempre as instruções específicas do seu docente na página da atividade no Moodle.</p>
+      <p class="small">Pronto para incluir suas fotos e áudio — substitua os arquivos nos caminhos indicados ou utilize a interface do Moodle.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Accordion behaviour
+    document.querySelectorAll('.accordion button').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const target = document.getElementById(btn.dataset.target.replace('panel-','panel-')) || document.getElementById(btn.getAttribute('data-target'));
+        if(!target) return;
+        const open = target.classList.toggle('show');
+        btn.querySelector('.small').textContent = open ? '−' : '+';
+      });
+    });
+
+    // Simple image replacement via file input (drag-drop could be added)
+    // Note: this is here to preview files locally - when you upload to Moodle, use the Moodle uploader.
+    function readImage(file){
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = e=>{ document.getElementById('user-image').src = e.target.result; }
+      reader.readAsDataURL(file);
+    }
+
+    // Allow user to paste an image (Ctrl+V) into the image slot
+    const imageSlot = document.getElementById('image-slot');
+    imageSlot.addEventListener('paste', (e)=>{
+      const items = (e.clipboardData || e.originalEvent.clipboardData).items;
+      for(const it of items){ if(it.kind === 'file'){ const f = it.getAsFile(); readImage(f); } }
+    });
+
+    // Allow drag & drop files to image slot
+    imageSlot.addEventListener('dragover', e=>{ e.preventDefault(); imageSlot.style.opacity = .8; });
+    imageSlot.addEventListener('dragleave', e=>{ imageSlot.style.opacity = 1; });
+    imageSlot.addEventListener('drop', e=>{
+      e.preventDefault(); imageSlot.style.opacity = 1; const f = e.dataTransfer.files[0]; if(f && f.type.startsWith('image/')) readImage(f);
+    });
+
+    // Download simple template as TXT for the student's roteiro
+    function downloadTemplate(){
+      const text = `Roteiro - Entrega da Tarefa\n\nNome:\nTurma:\nResumo da atividade (3-5 linhas):\n\nItens entregues:\n- Arquivo principal (formato):\n- Complementos (imagens/audio):\n\nObservações importantes:`;
+      const blob = new Blob([text], {type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'roteiro_tarefa.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+  </script>
 </body>
 </html>
